@@ -1,19 +1,45 @@
-source /usr/share/zsh-antigen/antigen.zsh
+# Check if zplug is installed
+if [[ ! -d ~/.zplug ]]; then
+    git clone https://github.com/zplug/zplug ~/.zplug
+    source ~/.zplug/init.zsh && zplug update --self
+fi
+
+# Essential
+source ~/.zplug/init.zsh
+
+zplug "zplug/zplug"
 
 # Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
+zplug "plugins/git", from:oh-my-zsh, nice:10
 
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-history-substring-search"
 
 # Load the theme.
-antigen theme jreese
+zplug "themes/jreese", from:oh-my-zsh
 
-# Tell antigen that you're done.
-antigen apply
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+	printf "Install? [y/N]: "
+	if read -q; then
+		echo; zplug install
+	fi
+fi
 
-export PATH="/usr/local/bin:$HOME/.node/bin:$PATH:$HOME/.config/.tools"
+# Then, source plugins and add commands to $PATH
+zplug load
+
+if [ -d ~/.linuxbrew/bin ]; then
+	PATH="$HOME/.linuxbrew/bin:$PATH"
+fi
+
+if [ -d ~/.node/bin ]; then
+	PATH="$HOME/.node/bin:$PATH"
+fi
+
+export PATH="$HOME/.dotfiles/.tools:$PATH"
 
