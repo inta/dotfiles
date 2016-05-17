@@ -43,3 +43,7 @@ fi
 
 export PATH="$HOME/.dotfiles/.tools:$PATH"
 
+# setup docker machine
+if [ $(docker-machine status) = "Running" ]; then
+	eval $(docker-machine env)
+fi
