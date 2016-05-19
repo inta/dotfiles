@@ -1,7 +1,7 @@
 # Check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    source ~/.zplug/init.zsh && zplug update --self
+	git clone https://github.com/zplug/zplug ~/.zplug
+	source ~/.zplug/init.zsh && zplug update --self
 fi
 
 # Essential
@@ -44,6 +44,6 @@ fi
 export PATH="$HOME/.dotfiles/.tools:$PATH"
 
 # setup docker machine
-if [ $(docker-machine status) = "Running" ]; then
+if command -v docker-machine > /dev/null && [ $(docker-machine status) = "Running" ]; then
 	eval $(docker-machine env)
 fi
