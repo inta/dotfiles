@@ -1,23 +1,13 @@
 #!/bin/sh
 
-msg() {
-	str=$1
-	for color_num in $(echo $str | grep -oP "(?<=%)\d+(?=%)"); do
-		if command -v tput > /dev/null; then
-			local color=$(tput setaf $color_num)
-			local default=$(tput sgr0)
-		fi
-		str=$(echo $str | sed s/%$color_num%/$color/)
-	done
-	printf "$str$default\n"
-}
+. "$(dirname "$0")/.tools/.lib/msg.sh"
 
 if ! command -v curl > /dev/null || ! command -v zsh > /dev/null; then
 	msg "%1%ERROR: This script requires curl and zsh to be installed"
 	exit 1;
 fi
 
-dotfiles_path=$(cd "$(dirname "$0")"; pwd)
+dotfiles_path=$(cd "$(dirname "$0")" || exit; pwd)
 
 msg "%4%Creating symlinks:"
 files=".zshrc .gtkrc-2.0"
