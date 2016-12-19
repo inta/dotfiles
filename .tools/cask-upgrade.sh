@@ -9,6 +9,11 @@ caskroomPath="/usr/local/Caskroom"
 msg "%4%Cask upgrade"
 
 for app in $(brew cask list); do
+	# do not match rubbish like "(!)"
+	if echo "$app" | grep -q "^[^a-z0-9-]*$"; then
+		continue;
+	fi
+
 	appInfo=$(brew cask info "$app")
 	latestVersion=$(echo "$appInfo" | grep -m 1 "${app}: [^ ]*" | awk '{print $2}')
 	latestPath="$caskroomPath/$app/$latestVersion"
