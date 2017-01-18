@@ -47,9 +47,11 @@ fi
 export PATH="$HOME/.dotfiles/.tools:$PATH"
 
 # setup docker machine
-if command -v docker-machine > /dev/null && [ $(docker-machine status) = "Running" ]; then
-	eval $(docker-machine env)
-fi
+#if command -v docker-machine > /dev/null && [ "$(docker-machine status)" = "Running" ]; then
+#	eval $(docker-machine env)
+#fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 if [ -f ~/.private-tokens.sh ]; then
 	. ~/.private-tokens.sh
