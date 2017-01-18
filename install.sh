@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 msg() {
 	str=$1
@@ -20,7 +20,7 @@ fi
 dotfiles_path=$(cd "$(dirname "$0")"; pwd)
 
 msg "%4%Creating symlinks:"
-files=".zshrc .gtkrc-2.0"
+files=".zshrc"
 for file in $files; do
 	if [ ! -h "$HOME/$file" ]; then
 		mv "$HOME/$file" "$HOME/$file.bak"
@@ -35,3 +35,9 @@ for file in $files; do
 		msg "%3%symlink for $file already in place"
 	fi
 done
+
+# cp /usr/share/themes/Adwaita ~/.local/share/themes
+
+# if read -q "REPLY?Patch system Adwaita theme to use dark GTK+2 style? "; then
+# 	echo "jop"
+# fi

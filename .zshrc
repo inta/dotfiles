@@ -40,6 +40,9 @@ fi
 if [ -d ~/.node/bin ]; then
 	PATH="$HOME/.node/bin:$PATH"
 fi
+if [ -d ~/.local/share/npm ]; then
+	PATH="$HOME/.local/share/npm/bin:$PATH"
+fi
 
 export PATH="$HOME/.dotfiles/.tools:$PATH"
 
@@ -47,3 +50,10 @@ export PATH="$HOME/.dotfiles/.tools:$PATH"
 if command -v docker-machine > /dev/null && [ $(docker-machine status) = "Running" ]; then
 	eval $(docker-machine env)
 fi
+
+if [ -f ~/.private-tokens.sh ]; then
+	. ~/.private-tokens.sh
+fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
