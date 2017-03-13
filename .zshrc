@@ -13,10 +13,10 @@ zplug "zplug/zplug"
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-zplug "plugins/git", from:oh-my-zsh, nice:10
+zplug "plugins/git", from:oh-my-zsh, defer:3
 
 # Syntax highlighting bundle.
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-history-substring-search"
 
 # Load the theme.

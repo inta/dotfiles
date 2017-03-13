@@ -1,9 +1,15 @@
 #!/bin/sh
 
-# dark theme for gtk2 programms
-ln -s ~/.dotfiles/.gtk-2.0 .gtk-2.0
+if [ ! -L ~/.config ]; then
+	cp -a ~/.config/* ~/.dotfiles/.config/
+	rm -rf ~/.config/
+	ln -s ~/.dotfiles/.config ~/.config
+fi
 
-ln -s ~/.dotfiles/.zshrc .zshrc
+if [ ! -L ~/.zshrc ]; then
+	mv ~/.zshrc ~/.zshrc.backup
+	ln -s ~/.dotfiles/.zshrc ~/.zshrc
+fi
 
 chsh -s /bin/zsh
 

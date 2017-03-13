@@ -2,7 +2,7 @@
 
 deb_url=$(wget -qO - https://www.sublimetext.com/3 | grep -Po '(?<=href=")[^"]*(?=">\s*Ubuntu 64 bit)')
 deb_file=$(basename "$deb_url")
-deb_log=".installed-sublime.log"
+deb_log="$(dirname $0)/.installed-sublime.log"
 
 if [ -f "$deb_log" ]; then
 	deb_old=$(cat "$deb_log")
