@@ -13,3 +13,5 @@ fi
 
 chsh -s /bin/zsh
 
+gsettings set org.gnome.settings-daemon.peripherals.keyboard remember-numlock-state true
+
