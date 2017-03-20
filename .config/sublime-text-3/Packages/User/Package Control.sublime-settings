@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ApacheConf.tmLanguage",
+		"Boxy Theme",
+		"Dockerfile Syntax Highlighting",
+		"EditorConfig",
+		"Package Control",
+		"PHP-Twig",
+		"PhpDoc",
+		"SideBarEnhancements",
+		"Surround",
+		"zenburn"
+	]
+}

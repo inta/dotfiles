@@ -1,0 +1,28 @@
+{
+	"color_scheme": "Packages/zenburn/zenburn.tmTheme",
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		80,
+		120
+	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"theme": "Boxy Tomorrow.sublime-theme",
+	"theme_accent_tangerine": true,
+	"theme_button_rounded": true,
+	"theme_find_panel_close_hidden": true,
+	"theme_scrollbar_rounded": true,
+	"theme_tab_arrows_hidden": true,
+	"theme_tab_mouse_wheel_switch": true,
+	"theme_tab_selected_overlined": true
+}
