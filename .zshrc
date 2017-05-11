@@ -61,4 +61,12 @@ fi
 if [ -d "$HOME/.cargo/bin" ]; then
 	export PATH="$HOME/.cargo/bin:$PATH"
 fi
+if [ -d "$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src" ]; then
+	export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+fi
+
+if [ -d "$HOME/Qt/5.6/gcc_64" ]; then
+	export PKG_CONFIG_PATH="$HOME/Qt/5.6/gcc_64/lib/pkgconfig"
+	export CMAKE_PREFIX_PATH="$HOME/Qt/5.6/gcc_64"
+fi
 
