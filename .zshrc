@@ -20,7 +20,8 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-history-substring-search"
 
 # Load the theme.
-zplug "themes/jreese", from:oh-my-zsh
+#zplug "themes/jreese", from:oh-my-zsh
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -57,5 +58,7 @@ if [ -f ~/.private-tokens.sh ]; then
 	. ~/.private-tokens.sh
 fi
 
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -d "$HOME/.cargo/bin" ]; then
+	export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
