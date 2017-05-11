@@ -21,6 +21,9 @@ zplug "zsh-users/zsh-history-substring-search"
 
 # Load the theme.
 #zplug "themes/jreese", from:oh-my-zsh
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time time)
+POWERLEVEL9K_MODE='awesome-fontconfig'
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
 # Install plugins if there are plugins that have not been installed
