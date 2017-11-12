@@ -37,23 +37,11 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-if [ -d ~/.linuxbrew/bin ]; then
-	PATH="$HOME/.linuxbrew/bin:$PATH"
-fi
-
-if [ -d ~/.node/bin ]; then
-	PATH="$HOME/.node/bin:$PATH"
-fi
 if [ -d ~/.local/share/npm ]; then
 	PATH="$HOME/.local/share/npm/bin:$PATH"
 fi
 
 export PATH="$HOME/.dotfiles/.tools:$PATH"
-
-# setup docker machine
-#if command -v docker-machine > /dev/null && [ "$(docker-machine status)" = "Running" ]; then
-#	eval $(docker-machine env)
-#fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -66,10 +54,5 @@ if [ -d "$HOME/.cargo/bin" ]; then
 fi
 if [ -d "$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src" ]; then
 	export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-fi
-
-if [ -d "$HOME/Qt/5.6/gcc_64" ]; then
-	export PKG_CONFIG_PATH="$HOME/Qt/5.6/gcc_64/lib/pkgconfig"
-	export CMAKE_PREFIX_PATH="$HOME/Qt/5.6/gcc_64"
 fi
 

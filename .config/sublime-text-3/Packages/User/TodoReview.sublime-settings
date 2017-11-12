@@ -1,0 +1,15 @@
+{
+	"patterns": {
+		"FIXME": "FIX ?ME[\\s]*?:[\\s]*(?P<fixme>.*)$",
+		"TODO": "TODO[\\s]*?:[\\s]*(?P<todo>.*)$",
+		"README": "README[\\s]*?:[\\s]*(?P<readme>.*)$",
+		"NOTE": "NOTE[\\s]*?:[\\s]*(?P<note>.*)$"
+	},
+	"patterns_weight": {
+		"FIXME": 1,
+		"TODO": 3,
+		"README": 5,
+		"NOTE": 6,
+		"TEST": 9
+	}
+}
