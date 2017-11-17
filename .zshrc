@@ -56,3 +56,6 @@ if [ -d "$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib
 	export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 fi
 
+if [ -f "$HOME/.zshrc.local" ]; then
+	. "$HOME/.zshrc.local"
+fi
