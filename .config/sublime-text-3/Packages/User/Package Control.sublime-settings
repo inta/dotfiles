@@ -5,7 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"A File Icon",
 		"AceJump",
 		"Anaconda",
 		"anaconda_rust",
@@ -35,6 +34,7 @@
 		"SublimeLinter-shellcheck",
 		"Sublimerge 3",
 		"tern_for_sublime",
+		"Theme - Fladaptive",
 		"TodoReview",
 		"TOML",
 		"Xdebug Client",
