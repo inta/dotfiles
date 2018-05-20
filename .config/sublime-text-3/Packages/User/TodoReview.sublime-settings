@@ -11,5 +11,9 @@
 		"README": 5,
 		"NOTE": 6,
 		"TEST": 9
-	}
+	},
+	"exclude_folders": [
+		"*.git*",
+		"*vendor*"
+	],
 }
