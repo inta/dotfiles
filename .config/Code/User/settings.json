@@ -1,0 +1,26 @@
+{
+	"editor.insertSpaces": false,
+	"editor.rulers": [80, 120],
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"[markdown]": {
+		"files.trimTrailingWhitespace": false
+	},
+	"telemetry.enableTelemetry": false,
+	"telemetry.enableCrashReporter": false,
+	"gitlens.currentLine.enabled": false,
+	"gitlens.defaultDateFormat": "DD.MM.YYYY HH:mm",
+	"gitlens.advanced.messages": {
+		"suppressShowKeyBindingsNotice": true
+	},
+	"gitlens.codeLens.enabled": false,
+	"workbench.colorTheme": "Railgun",
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#333",
+		"statusBar.foreground": "#ddd",
+		"statusBar.debuggingBackground": "#e41",
+		"statusBar.debuggingForeground": "#ddd"
+	},
+	"workbench.iconTheme": "file-icons"
+}
