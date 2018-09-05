@@ -22,5 +22,7 @@
 		"statusBar.debuggingBackground": "#e41",
 		"statusBar.debuggingForeground": "#ddd"
 	},
-	"workbench.iconTheme": "file-icons"
+	"workbench.iconTheme": "file-icons",
+	"shellcheck.disableVersionCheck": true,
+	"workbench.statusBar.feedback.visible": false
 }
