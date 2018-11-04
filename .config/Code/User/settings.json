@@ -24,5 +24,7 @@
 	},
 	"workbench.iconTheme": "file-icons",
 	"explorer.confirmDragAndDrop": false,
-	"explorer.confirmDelete": false
+	"explorer.confirmDelete": false,
+	"shellcheck.disableVersionCheck": true,
+	"workbench.statusBar.feedback.visible": false
 }
