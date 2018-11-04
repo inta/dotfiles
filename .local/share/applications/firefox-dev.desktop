@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Firefox Developer Edition
+GenericName=Developer Web Browser
+Comment=Browse the World Wide Web
+Type=Application
+Terminal=false
+Exec=/home/share/applications/firefox-developer-edition/firefox %U --class FirefoxDev
+Icon=/home/share/applications/firefox-developer-edition/browser/chrome/icons/default/default128.png
+Path=/home/share/applications/firefox-developer-edition
+StartupWMClass=FirefoxDev
+StartupNotify=true
+Categories=Network;WebBrowser;Developer;

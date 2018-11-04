@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mozilla Firefox
+GenericName=Web Browser
+Comment=Browse the World Wide Web
+Type=Application
+Terminal=false
+Exec=/home/share/applications/firefox/firefox %U
+Icon=/home/share/applications/firefox/browser/chrome/icons/default/default128.png
+StartupNotify=true
+Categories=Network;WebBrowser;
