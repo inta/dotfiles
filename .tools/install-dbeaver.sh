@@ -1,22 +1,15 @@
 #!/bin/sh
 
-deb_file="$HOME/Downloads/dbeaver-ce_latest_amd64.deb"
-
 if [ "$(id -u)" -ne 0 ]; then
 	echo "requested operation requires superuser privilege"
 	echo "enter root password"
-	exec su -c "$0 $*"
+	exec su - -c "$0 $*"
 fi
 
-echo "Downloading DBeaver ..."
-wget https://dbeaver.jkiss.org/files/dbeaver-ce_latest_amd64.deb -O "$deb_file"
-if [ $? -ne 0 ]; then
-	echo "Download failed"
-	exit 1
+wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | apt-key add -
+if [ ! -f /etc/apt/sources.list.d/dbeaver.list ]; then
+	echo "deb https://dbeaver.io/debs/dbeaver-ce /" | tee /etc/apt/sources.list.d/dbeaver.list
 fi
 
-dpkg -i "$deb_file"
-if [ $? -eq 0 ]; then
-	rm "$deb_file"
-	echo "DONE"
-fi
+#apt update && apt install dbeaver-ce
+
