@@ -11,5 +11,5 @@ if [ ! -f /etc/apt/sources.list.d/dbeaver.list ]; then
 	echo "deb https://dbeaver.io/debs/dbeaver-ce /" | tee /etc/apt/sources.list.d/dbeaver.list
 fi
 
-#apt update && apt install dbeaver-ce
+apt update && apt install dbeaver-ce
 
