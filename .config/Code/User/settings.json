@@ -1,20 +1,37 @@
 {
+	// code related
 	"editor.insertSpaces": false,
-	"editor.rulers": [80, 120],
+	"files.eol": "\n",
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"[markdown]": {
 		"files.trimTrailingWhitespace": false
 	},
+	"css.lint.duplicateProperties": "warning",
+	"css.lint.zeroUnits": "warning",
+	"html.format.endWithNewline": true,
+	"html.format.indentHandlebars": true,
+	"html.format.maxPreserveNewLines": 2,
+	"html.format.indentInnerHtml": true,
+	"html.format.extraLiners": "",
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+
+	// privacy
 	"telemetry.enableTelemetry": false,
 	"telemetry.enableCrashReporter": false,
-	"gitlens.currentLine.enabled": false,
-	"gitlens.defaultDateFormat": "DD.MM.YYYY HH:mm",
-	"gitlens.advanced.messages": {
-		"suppressShowKeyBindingsNotice": true
-	},
-	"gitlens.codeLens.enabled": false,
+	"workbench.enableExperiments": false,
+
+	// anti annoyance
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"files.enableTrash": false,
+
+	// optics
+	"editor.rulers": [80, 120],
+	"workbench.statusBar.feedback.visible": false,
+	"editor.cursorBlinking": "smooth",
+	"editor.find.autoFindInSelection": true,
 	"workbench.colorTheme": "Railgun",
 	"workbench.colorCustomizations": {
 		"statusBar.background": "#333",
@@ -23,8 +40,13 @@
 		"statusBar.debuggingForeground": "#ddd"
 	},
 	"workbench.iconTheme": "file-icons",
-	"explorer.confirmDragAndDrop": false,
-	"explorer.confirmDelete": false,
-	"shellcheck.disableVersionCheck": true,
-	"workbench.statusBar.feedback.visible": false
+
+	// extensions
+	"gitlens.currentLine.enabled": false,
+	"gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
+	"gitlens.advanced.messages": {
+		"suppressShowKeyBindingsNotice": true
+	},
+	"gitlens.codeLens.enabled": false,
+	"shellcheck.disableVersionCheck": true
 }
