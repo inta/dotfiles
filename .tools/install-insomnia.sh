@@ -3,7 +3,7 @@
 if [ "$(id -u)" -ne 0 ]; then
 	echo "requested operation requires superuser privilege"
 	echo "enter root password"
-	exec su - -c "$0 $*"
+	exec su -c "$0 $*"
 fi
 
 wget -O - https://insomnia.rest/keys/debian-public.key.asc | apt-key add -
