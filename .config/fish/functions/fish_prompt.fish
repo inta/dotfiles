@@ -15,18 +15,29 @@ function fish_prompt
 
 	if type -q git
 		set -l git_dir (command git rev-parse --git-dir 2>/dev/null)
+		set -l git_branch
+		set -l git_remote
+		set -l git_ahead
+		set -l git_behind
 		if test -n "$git_dir"
-			set -l git_branch (command git branch | sed -n '/\* /s///p' 2>/dev/null)
-			set -l git_remote (command git for-each-ref --format='%(upstream:short)' (command git symbolic-ref -q HEAD) origin/mainline)
-			set -l git_ahead (command git rev-list --count $git_remote..$git_branch)
-			set -l git_behind (command git rev-list --count $git_branch..$git_remote)
+			if test -n (command git branch 2>/dev/null) 
+				set git_branch (command git branch | sed -n '/\* /s///p' 2>/dev/null)
+				set git_remote (command git for-each-ref --format='%(upstream:short)' (command git symbolic-ref -q HEAD) origin/mainline)
+			end
+			if test -n "$git_branch" && test -n "$git_remote"
+				set git_ahead (command git rev-list --count $git_remote..$git_branch)
+				set git_behind (command git rev-list --count $git_branch..$git_remote)
+			end
 			set_color green
-			echo -n "  $git_branch"
-			if test "$git_ahead" -gt 0
+			echo -n " "
+			if test -n "$git_branch"
+				echo -n " $git_branch"
+			end
+			if test -n "$git_ahead" && test "$git_ahead" -gt 0
 				set_color FC0
 				echo -n " ↑$git_ahead"
 			end
-			if test "$git_behind" -gt 0
+			if test -n "$git_behind" && test "$git_behind" -gt 0
 				set_color F70
 				echo -n " ↓$git_behind"
 			end
