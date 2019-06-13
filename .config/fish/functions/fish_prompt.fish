@@ -2,6 +2,9 @@ function fish_prompt
 	#set cmd_status $status
 
 	set_color FC0
+	if test (id -u) -eq 0
+		set_color E00
+	end
 	echo -n $USER
 	set_color normal
 	echo -n '@'
