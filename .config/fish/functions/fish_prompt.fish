@@ -28,7 +28,11 @@ function fish_prompt
 				set git_ahead (command git rev-list --count $git_remote..$git_branch)
 				set git_behind (command git rev-list --count $git_branch..$git_remote)
 			end
+			set -l git_dirty (command git status -s 2>/dev/null)
 			set_color green
+			if test -n "$git_dirty"
+				set_color F70
+			end
 			echo -n " "
 			if test -n "$git_branch"
 				echo -n " $git_branch"
