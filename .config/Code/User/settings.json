@@ -16,6 +16,7 @@
 	"html.format.indentInnerHtml": true,
 	"html.format.extraLiners": "",
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
 
 	// privacy
 	"telemetry.enableTelemetry": false,
