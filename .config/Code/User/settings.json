@@ -32,7 +32,6 @@
 	"editor.rulers": [80, 120],
 	"workbench.statusBar.feedback.visible": false,
 	"editor.cursorBlinking": "smooth",
-	"editor.find.autoFindInSelection": true,
 	"workbench.colorTheme": "Railgun",
 	"workbench.colorCustomizations": {
 		"statusBar.background": "#333",
