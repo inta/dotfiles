@@ -30,7 +30,7 @@
 
 	// optics
 	"editor.rulers": [80, 120],
-	"workbench.statusBar.feedback.visible": false,
+	"editor.renderWhitespace": "selection",
 	"editor.cursorBlinking": "smooth",
 	"workbench.colorTheme": "Railgun",
 	"workbench.colorCustomizations": {
@@ -48,5 +48,12 @@
 		"suppressShowKeyBindingsNotice": true
 	},
 	"gitlens.codeLens.enabled": false,
-	"shellcheck.disableVersionCheck": true
+	"shellcheck.disableVersionCheck": true,
+
+	// bracket pair colorizer
+	"bracket-pair-colorizer-2.colors": [
+		"#706e5b",
+	],
+
+	// this is the end you know ...
 }
