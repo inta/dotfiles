@@ -19,7 +19,9 @@ apt install -y \
 	encfs \
 	shellcheck \
 	tilda \
-	remmina
+	remmina \
+	fish \
+	adwaita-qt
 
 # install docker
 curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
