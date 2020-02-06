@@ -27,7 +27,7 @@ function fish_prompt
 				set git_behind (command git rev-list --count $git_branch..$git_remote)
 			end
 			set -l git_dirty (command git status -s 2>/dev/null)
-			set -l git_staged (command git diff --cached 2>/dev/null)
+			set -l git_staged (command git diff --cached | head 2>/dev/null)
 			set -l git_stashed (command git stash list 2>/dev/null)
 
 			set_color green
