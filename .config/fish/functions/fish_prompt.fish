@@ -23,8 +23,8 @@ function fish_prompt
 			set git_branch (command git branch | sed -n '/\* /s///p' 2>/dev/null)
 			set git_remote (command git for-each-ref --format='%(upstream:short)' (command git symbolic-ref -q HEAD) origin/mainline)
 			if test -n "$git_branch" && test -n "$git_remote"
-				set git_ahead (command git rev-list --count $git_remote..$git_branch)
-				set git_behind (command git rev-list --count $git_branch..$git_remote)
+				set git_ahead (command git rev-list --count $git_remote..$git_branch 2>/dev/null)
+				set git_behind (command git rev-list --count $git_branch..$git_remote 2>/dev/null)
 			end
 			set -l git_dirty (command git status -s 2>/dev/null)
 			set -l git_staged (command git diff --cached | head 2>/dev/null)
