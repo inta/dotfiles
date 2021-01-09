@@ -34,6 +34,7 @@
 	"editor.cursorBlinking": "smooth",
 	"workbench.colorTheme": "Railgun",
 	"workbench.colorCustomizations": {
+		"statusBar.noFolderBackground": "#333",
 		"statusBar.background": "#333",
 		"statusBar.foreground": "#ddd",
 		"statusBar.debuggingBackground": "#e41",

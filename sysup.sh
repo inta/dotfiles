@@ -7,21 +7,17 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 apt install -y \
-	apt-transport-https \
-	ca-certificates \
-	curl \
 	htop \
 	net-tools \
-	psmisc \
 	zsh \
 	neovim \
 	rsync \
 	encfs \
 	shellcheck \
-	tilda \
+	#tilda \
 	remmina \
 	fish \
-	adwaita-qt
+	#adwaita-qt
 
 # install docker
 curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
