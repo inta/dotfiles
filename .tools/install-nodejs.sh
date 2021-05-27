@@ -12,7 +12,16 @@ if [ "$(id -u)" = 0 ]; then
 else
 
 	echo "Configuring npm"
-	echo '> npm config set prefix ~/.local/share/npm'
-	npm config set prefix ~/.local/share/npm
+	echo '> npm config set prefix ~/.npm/global-modules'
+	npm config set prefix ~/.npm/global-modules
+
+	mkdir -p ~/.npm/global-modules/bin
+	mkdir -p ~/.npm/global-modules/lib
+
+	# npm config set init.author.name "My Name"
+	# npm config set init.author.email "me@example.com"
+	# npm config set init.author.url "http://example.com"
+	# npm config set init.license "MIT"
+	npm config set init.version "0.1.0"
 
 fi

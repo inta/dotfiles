@@ -2,8 +2,8 @@ if test -d "$HOME/.cargo/bin"
 	set PATH "$HOME/.cargo/bin" $PATH
 end
 
-if test -d "$HOME/.local/share/npm/bin"
-	set PATH "$HOME/.local/share/npm/bin" $PATH
+if test -d "$HOME/.npm/global-modules/bin"
+	set PATH "$HOME/.npm/global-modules/bin" $PATH
 end
 
 if test -d "$HOME/.dotfiles/.tools"

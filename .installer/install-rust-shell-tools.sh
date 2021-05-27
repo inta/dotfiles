@@ -1,17 +1,17 @@
 #!/bin/sh
 
-#cargon install
+#cargo install
 #ripgrep ("rg", grep)
 #bat (cat with syntax highlighting and git support)
 #fd-find ("fd", find)
 #exa (nice ls with tree support)
-#procs (ps process listing)
-#du-dust ("dust", disk usage)
 #skim ("sk", fuzzyfinder)
 #sd (find & replace)
+#procs (ps process listing)
+#du-dust ("dust", disk usage)
 #tokei (cloc show lines of code)
-#starship (needs deb package: libssl-dev)
 #hyperfine (benchmarking shell commands)
+#starship (needs deb package: libssl-dev)
 
 ### top tools
 #bottom ("btm")

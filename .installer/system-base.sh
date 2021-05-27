@@ -7,14 +7,15 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 apt install -y \
-	htop \
-	net-tools \
+	pm-utils \
 	zsh \
-	neovim \
+	fish \
+	shellcheck \
+	net-tools \
+	network-manager-openvpn-gnome \
+	htop \
 	rsync \
 	encfs \
-	shellcheck \
+	neovim \
 	remmina \
-	fish \
-	network-manager-openvpn-gnome
-
+	build-essential
