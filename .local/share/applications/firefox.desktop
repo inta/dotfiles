@@ -5,7 +5,7 @@ GenericName=Web Browser
 Comment=Browse the World Wide Web
 Type=Application
 Terminal=false
-Exec=env MOZ_USE_XINPUT2=1 /home/share/applications/firefox/firefox %U
+Exec=env MOZ_USE_XINPUT2=1 MOZ_ENABLE_WAYLAND=1 /home/share/applications/firefox/firefox %U
 Icon=/home/share/applications/firefox/browser/chrome/icons/default/default128.png
 StartupNotify=true
 Categories=Network;WebBrowser;

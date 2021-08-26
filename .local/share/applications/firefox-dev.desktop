@@ -5,7 +5,7 @@ GenericName=Developer Web Browser
 Comment=Browse the World Wide Web
 Type=Application
 Terminal=false
-Exec=env MOZ_USE_XINPUT2=1 /home/share/applications/firefox-developer-edition/firefox %U --class FirefoxDev
+Exec=env MOZ_USE_XINPUT2=1 MOZ_ENABLE_WAYLAND=1 /home/share/applications/firefox-developer-edition/firefox %U --class FirefoxDev
 Icon=/home/share/applications/firefox-developer-edition/browser/chrome/icons/default/default128.png
 Path=/home/share/applications/firefox-developer-edition
 StartupWMClass=FirefoxDev
