@@ -10,18 +10,16 @@ deb_file=/tmp/${deb_name}
 if [ "$(id -u)" -ne 0 ]; then
 	echo "requested operation requires superuser privilege"
 	echo "enter root password"
-	exec su -c "$0 $*" -
+	exec su -c "$(realpath "$0") $*" -
 fi
 
 echo "Downloading Rocket.Chat.Electron ..."
-wget "$download_url" -O "$deb_file"
-if [ $? -ne 0 ]; then
+if ! wget "$download_url" -O "$deb_file"; then
 	echo "Download failed"
 	exit 1
 fi
 
-dpkg -i "$deb_file"
-if [ $? -eq 0 ]; then
+if dpkg -i "$deb_file"; then
 	rm "$deb_file"
 	echo "DONE"
 fi
