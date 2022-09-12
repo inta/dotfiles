@@ -9,3 +9,7 @@ end
 if test -d "$HOME/.dotfiles/.tools"
 	set PATH "$HOME/.dotfiles/.tools" $PATH
 end
+
+if test -f "$HOME/.config/asound.state"
+	alsactl --file ~/.config/asound.state restore 2>/dev/null
+end

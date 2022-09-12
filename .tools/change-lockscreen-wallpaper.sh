@@ -13,4 +13,4 @@ new_wallpaper="file://$random_file"
 gsettings set org.gnome.desktop.screensaver picture-uri "$new_wallpaper"
 
 # lock the session like super+l would do
-loginctl lock-session "$XDG_SESSION_ID"
+loginctl lock-session
