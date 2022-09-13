@@ -1,20 +1,12 @@
 #!/bin/sh
 
-deb_url=$(wget -qO - https://www.sublimetext.com/3 | grep -Po '(?<=href=")[^"]*(?=">\s*Ubuntu 64 bit)')
-deb_file=$(basename "$deb_url")
-deb_log="$(dirname $0)/.installed-sublime.log"
-
-if [ -f "$deb_log" ]; then
-	deb_old=$(cat "$deb_log")
-	if [ "$deb_file" = "$deb_old" ]; then
-		echo "No new version available – stopping install script"
-		exit
-	fi
-	dpkg -r "$deb_old"
+if [ "$(id -u)" -ne 0 ]; then
+	echo "requested operation requires superuser privilege"
+	echo "enter root password"
+	exec su - -c "$0 $*"
 fi
 
-wget "$deb_url"
-dpkg -i "$deb_file"
-echo "$deb_file" > "$deb_log"
-rm "$deb_file"
+curl https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | tee /usr/share/keyrings/sublimehq-pub.gpg
+echo "deb [signed-by=/usr/share/keyrings/sublimehq-pub.gpg] https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
 
+apt update && apt install sublime-text
