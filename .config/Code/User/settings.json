@@ -8,31 +8,28 @@
 	"[markdown]": {
 		"files.trimTrailingWhitespace": false
 	},
-	"css.lint.duplicateProperties": "warning",
-	"css.lint.zeroUnits": "warning",
-	"html.format.endWithNewline": true,
-	"html.format.indentHandlebars": true,
-	"html.format.maxPreserveNewLines": 2,
+	"html.format.maxPreserveNewLines": 1,
 	"html.format.indentInnerHtml": true,
 	"html.format.extraLiners": "",
+	"css.lint.duplicateProperties": "warning",
+	"css.lint.zeroUnits": "warning",
+	"css.format.spaceAroundSelectorSeparator": true,
+	"javascript.preferences.quoteStyle": "single",
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
-
-	// privacy
-	"telemetry.enableTelemetry": false,
-	"telemetry.enableCrashReporter": false,
-	"workbench.enableExperiments": false,
-
-	// anti annoyance
-	"explorer.confirmDragAndDrop": false,
-	"explorer.confirmDelete": false,
-	"files.enableTrash": false,
+	"typescript.preferences.quoteStyle": "single",
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+	"typescript.updateImportsOnFileMove.enabled": "always",
 
 	// optics
-	"editor.rulers": [80, 120],
+	"editor.rulers": [
+		80,
+		120
+	],
 	"editor.renderWhitespace": "selection",
 	"editor.cursorBlinking": "smooth",
-	"workbench.colorTheme": "Railgun",
 	"workbench.colorCustomizations": {
 		"statusBar.noFolderBackground": "#333",
 		"statusBar.background": "#333",
@@ -40,21 +37,19 @@
 		"statusBar.debuggingBackground": "#e41",
 		"statusBar.debuggingForeground": "#ddd"
 	},
-	"workbench.iconTheme": "file-icons",
+
+	// privacy
+	"telemetry.telemetryLevel": "off",
+	"workbench.enableExperiments": false,
+
+	// anti annoyance
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"files.enableTrash": false,
 
 	// extensions
-	"gitlens.currentLine.enabled": false,
-	"gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
-	"gitlens.advanced.messages": {
-		"suppressShowKeyBindingsNotice": true
-	},
-	"gitlens.codeLens.enabled": false,
-	"shellcheck.disableVersionCheck": true,
-
-	// bracket pair colorizer
-	"bracket-pair-colorizer-2.colors": [
-		"#706e5b",
-	],
+	"svelte.enable-ts-plugin": true,
+	"svelte.plugin.svelte.note-new-transformation": false,
 
 	// this is the end you know ...
 }
