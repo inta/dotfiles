@@ -1,0 +1,14 @@
+window:
+  dimensions:
+    columns: 150
+    lines: 50
+
+shell:
+  program: /usr/bin/fish
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+#  program: /usr/bin/tmux
+#  args:
+#    - attach

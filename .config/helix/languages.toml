@@ -1,0 +1,24 @@
+[[language]]
+name = "typescript"
+scope = "source.ts"
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "javascript"
+scope = "source.js"
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "json"
+scope = "source.json"
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "html"
+scope = "source.html"
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "svelte"
+scope = "source.svelte"
+indent = {tab-width = 4, unit = "\t"}
