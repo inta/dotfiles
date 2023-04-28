@@ -1,24 +1,52 @@
 [[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+comment-token = "//"
+language-server = {command = "rust-analyzer"}
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
 name = "typescript"
 scope = "source.ts"
+file-types = ["ts"]
+roots = ["package.json", "package-lock.json"]
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
 name = "javascript"
 scope = "source.js"
+file-types = ["js", "mjs", "cjs"]
+roots = ["package.json", "package-lock.json"]
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
 name = "json"
 scope = "source.json"
+file-types = ["json"]
+roots = []
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
 name = "html"
 scope = "source.html"
+file-types = ["html", "htm"]
+roots = []
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
 name = "svelte"
 scope = "source.svelte"
+file-types = ["svelte"]
+roots = []
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "stylesheet"
+scope = "source.css"
+file-types = ["css"]
+roots = []
 indent = {tab-width = 4, unit = "\t"}
