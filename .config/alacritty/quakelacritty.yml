@@ -1,0 +1,13 @@
+window:
+  decorations: none
+  opacity: 0.95
+
+shell:
+  program: /usr/bin/tmux
+  args:
+    - new-session
+    - -As
+    - quake
+
+key_bindings:
+  - { key: Q, mods: Control, action: Quit }

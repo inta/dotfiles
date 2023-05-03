@@ -9,6 +9,6 @@ shell:
     - -l
     - -c
     - "tmux attach || tmux"
-#  program: /usr/bin/tmux
-#  args:
-#    - attach
+
+key_bindings:
+  - { key: Q, mods: Control, action: Quit }

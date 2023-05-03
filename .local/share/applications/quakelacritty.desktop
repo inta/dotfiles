@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+TryExec=alacritty
+Exec=alacritty --class Quakelacritty --config-file /home/pcs/.config/alacritty/quakelacritty.yml
+Icon=Alacritty
+Terminal=false
+Categories=System;TerminalEmulator;
+
+Name=Quakelacritty
+GenericName=Terminal
+Comment=A fast, cross-platform, OpenGL terminal emulator
+StartupWMClass=Quakelacritty
