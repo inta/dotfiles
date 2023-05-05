@@ -5,6 +5,8 @@ window:
 shell:
   program: /usr/bin/tmux
   args:
+    - -L
+    - quake
     - new-session
     - -As
     - quake

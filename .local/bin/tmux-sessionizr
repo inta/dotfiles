@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+if [ $# -eq 1 ]; then
+	selected=$1
+else
+	selected=$(fd --min-depth 1 --max-depth 2 --type d . ~/Projects | sk --keep-right --reverse --delimiter=/ --nth=5..)
+fi
+
+# remove path prefix and trailing slash
+selected_name=$(echo $selected | rg "^$HOME/Projects/" -r '' | rg '/$' -r '')
+
+if [ -z $TMUX ]; then
+	tmux new-session -As $selected_name -c $selected
+fi
+
+if ! tmux has-session -t=$selected_name 2> /dev/null; then
+	tmux new-session -ds $selected_name -c $selected
+fi
+
+tmux switch-client -t $selected_name
