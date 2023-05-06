@@ -33,7 +33,7 @@ indent = {tab-width = 4, unit = "\t"}
 [[language]]
 name = "html"
 scope = "source.html"
-file-types = ["html", "htm"]
+file-types = ["html"]
 roots = []
 indent = {tab-width = 4, unit = "\t"}
 
@@ -48,5 +48,11 @@ indent = {tab-width = 4, unit = "\t"}
 name = "stylesheet"
 scope = "source.css"
 file-types = ["css"]
+roots = []
+indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "bash"
+scope = "source.bash"
 roots = []
 indent = {tab-width = 4, unit = "\t"}

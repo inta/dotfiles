@@ -8,7 +8,7 @@ shell:
   args:
     - -l
     - -c
-    - "tmux attach || tmux"
+    - "tmux attach || tmux-sessionizr"
 
 key_bindings:
   - { key: Q, mods: Control, action: Quit }
