@@ -36,6 +36,7 @@ scope = "source.html"
 file-types = ["html"]
 roots = []
 indent = {tab-width = 4, unit = "\t"}
+config = {format = {indentInnerHtml = true, extraLiners = ""}}
 
 [[language]]
 name = "svelte"
