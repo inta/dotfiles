@@ -3,12 +3,12 @@ window:
     columns: 150
     lines: 50
 
-# shell:
-#   program: /usr/bin/fish
-#   args:
-#     - -l
-#     - -c
-#     - "tmux attach || tmux-sessionizr"
+shell:
+  program: /usr/bin/fish
+  args:
+    - -l
+    - -c
+    - "zellij attach || zellij-sessionizr"
 
 key_bindings:
   - { key: Q, mods: Control, action: Quit }

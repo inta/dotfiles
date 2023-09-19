@@ -9,4 +9,5 @@ Categories=System;TerminalEmulator;
 Name=Quakelacritty
 GenericName=Terminal
 Comment=A fast, cross-platform, OpenGL terminal emulator
+StartupNotify=true
 StartupWMClass=Quakelacritty

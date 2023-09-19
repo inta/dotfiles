@@ -8,7 +8,7 @@ else
 fi
 
 # remove path prefix and trailing slash
-selected_name=$(echo $selected | rg "^$HOME/(?:Projects/)?" -r '' | rg '/?$' -r '' | rg '\.' -r '')
+selected_name=$(echo $selected | rg "^$HOME/(?:Projects/)?" -r '' | rg '/?$' -r '' | rg '\.?' -r '')
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
 	tmux new-session -ds $selected_name -c $selected -n hx

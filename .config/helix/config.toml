@@ -14,5 +14,8 @@ hidden = false
 [editor.indent-guides]
 render = true
 
+[editor.lsp]
+display-inlay-hints = true
+
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]

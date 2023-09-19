@@ -9,6 +9,9 @@ comment-token = "//"
 language-server = {command = "rust-analyzer"}
 indent = {tab-width = 4, unit = "\t"}
 
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
 [[language]]
 name = "typescript"
 scope = "source.ts"
@@ -29,6 +32,7 @@ scope = "source.json"
 file-types = ["json"]
 roots = []
 indent = {tab-width = 4, unit = "\t"}
+config = {"provideFormatter" = true, "json" = {"keepLines" = {"enable" = true}}}
 
 [[language]]
 name = "html"
@@ -57,3 +61,32 @@ name = "bash"
 scope = "source.bash"
 roots = []
 indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "sql"
+scope = "source.sql"
+injection-regex = "sql"
+file-types = ["sql"]
+indent = {tab-width = 4, unit = "\t"}
+language-server = {command = "sql-language-server", args = ["up", "--method", "stdio"]}
+
+# [language-server.ansible-language-server]
+# command = "ansible-language-server"
+# args = ["--stdio"]
+
+# [language-server.yaml-language-server.config.yaml]
+# format = {enable = true}
+# validation = true
+
+# [language-server.yaml-language-server.config.yaml.schemas]
+# "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+# "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
+
+# [[language]]
+# name = "yaml"
+# scope = "source.yaml"
+# file-types = ["yml", "yaml"]
+# roots = []
+# indent = {tab-width = 2, unit = "  "}
+# language-server = ["yaml-language-server", "ansible-language-server"]
+# injection-regex = "yml|yaml"

@@ -22,7 +22,7 @@ fi
 tar -xf "$tmp_dir/$archive_name" -C "$dest_dir/$dir_name" --strip-components=1
 
 if [ -d "$HOME/.local/bin" ]; then
-	ln -s "$dest_dir/$dir_name/hx" "$HOME/.local/bin/hx"
+	ln -snf "$dest_dir/$dir_name/hx" "$HOME/.local/bin/hx"
 fi
 
 rm -rf "$tmp_dir/$dir_name" "$tmp_dir/$archive_name"
