@@ -35,7 +35,8 @@ indent = {tab-width = 4, unit = "\t"}
 name = "bash"
 indent = {tab-width = 4, unit = "\t"}
 
-[language-server.sql-lanugage-server]
+[language-server.sql-language-server]
+# https://github.com/joe-re/sql-language-server
 command = "sql-language-server"
 args = ["up", "--method", "stdio"]
 
