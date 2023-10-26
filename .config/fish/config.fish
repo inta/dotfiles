@@ -17,3 +17,9 @@ end
 #if test -f "$HOME/.config/asound.state"
 #	alsactl --file ~/.config/asound.state restore 2>/dev/null
 #end
+
+# bun
+if test -d "$HOME/.bun/bin"
+	set --export BUN_INSTALL "$HOME/.bun"
+	set --export PATH $BUN_INSTALL/bin $PATH
+end

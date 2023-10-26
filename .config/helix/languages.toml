@@ -1,92 +1,49 @@
 [[language]]
 name = "rust"
-scope = "source.rust"
-injection-regex = "rust"
-file-types = ["rs"]
-roots = ["Cargo.toml", "Cargo.lock"]
-auto-format = true
-comment-token = "//"
-language-server = {command = "rust-analyzer"}
 indent = {tab-width = 4, unit = "\t"}
-
-[language-server.rust-analyzer.config.check]
-command = "clippy"
 
 [[language]]
 name = "typescript"
-scope = "source.ts"
-file-types = ["ts"]
-roots = ["package.json", "package-lock.json"]
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
 name = "javascript"
-scope = "source.js"
-file-types = ["js", "mjs", "cjs"]
-roots = ["package.json", "package-lock.json"]
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
 name = "json"
-scope = "source.json"
-file-types = ["json"]
-roots = []
 indent = {tab-width = 4, unit = "\t"}
-config = {"provideFormatter" = true, "json" = {"keepLines" = {"enable" = true}}}
+
+[language-server.vscode-html-language-server.config]
+# find formatting options at: https://github.com/beautify-web/js-beautify
+format = {indentInnerHtml = true, extraLiners = "", endWithNewline = true}
+provideFormatter = true
 
 [[language]]
 name = "html"
-scope = "source.html"
-file-types = ["html"]
-roots = []
 indent = {tab-width = 4, unit = "\t"}
-config = {format = {indentInnerHtml = true, extraLiners = ""}}
 
 [[language]]
 name = "svelte"
-scope = "source.svelte"
-file-types = ["svelte"]
-roots = []
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
-name = "stylesheet"
-scope = "source.css"
-file-types = ["css"]
-roots = []
+name = "css"
 indent = {tab-width = 4, unit = "\t"}
 
 [[language]]
 name = "bash"
-scope = "source.bash"
-roots = []
 indent = {tab-width = 4, unit = "\t"}
+
+[language-server.sql-lanugage-server]
+command = "sql-language-server"
+args = ["up", "--method", "stdio"]
 
 [[language]]
 name = "sql"
-scope = "source.sql"
-injection-regex = "sql"
-file-types = ["sql"]
 indent = {tab-width = 4, unit = "\t"}
-language-server = {command = "sql-language-server", args = ["up", "--method", "stdio"]}
+language-servers = ["sql-language-server"]
 
-# [language-server.ansible-language-server]
-# command = "ansible-language-server"
-# args = ["--stdio"]
-
-# [language-server.yaml-language-server.config.yaml]
-# format = {enable = true}
-# validation = true
-
-# [language-server.yaml-language-server.config.yaml.schemas]
-# "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
-# "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
-
-# [[language]]
-# name = "yaml"
-# scope = "source.yaml"
-# file-types = ["yml", "yaml"]
-# roots = []
-# indent = {tab-width = 2, unit = "  "}
-# language-server = ["yaml-language-server", "ansible-language-server"]
-# injection-regex = "yml|yaml"
+[[language]]
+name = "nix"
+indent = {tab-width = 4, unit = "\t"}

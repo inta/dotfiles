@@ -1,4 +1,5 @@
 window:
+  title: Zellijalacritty
   dimensions:
     columns: 150
     lines: 50

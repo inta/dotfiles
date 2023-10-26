@@ -13,5 +13,5 @@ tar -xf "$tmp_dir/$archive_name" -C "$dest_dir"
 rm "$tmp_dir/$archive_name"
 
 if [ -d "$HOME/.local/bin" ]; then
-	ln -s "$dest_dir/$dir_name/lapce" "$HOME/.local/bin/lapce"
+	ln -snf "$dest_dir/$dir_name/lapce" "$HOME/.local/bin/lapce"
 fi

@@ -1,6 +1,8 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
     normal {
+        // bind "Ctrl k" { Run "zellij" "run" "--floating" "--close-on-exit" "--" "zellij-sessionizr" { close_on_exit true; }; }
+        // bind "Ctrl k" { Run "zellij" "run" "--floating" "--close-on-exit" "--" "zellij-sessionizr" { close_on_exit true; }; }
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }
@@ -204,7 +206,7 @@ plugins {
 //    - true
 //    - false (Default)
 //
-// simplified_ui true
+simplified_ui true
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL

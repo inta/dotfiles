@@ -19,3 +19,4 @@ display-inlay-hints = true
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
+"A-j" = ["search_selection", "extend_search_next"]

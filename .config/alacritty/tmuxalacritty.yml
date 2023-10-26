@@ -1,4 +1,5 @@
 window:
+  title: Tmuxalacritty
   dimensions:
     columns: 150
     lines: 50

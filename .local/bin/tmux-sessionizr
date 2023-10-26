@@ -8,17 +8,17 @@ else
 fi
 
 # remove path prefix and trailing slash
-selected_name=$(echo $selected | rg "^$HOME/(?:Projects/)?" -r '' | rg '/?$' -r '' | rg '\.?' -r '')
+selected_name=$(echo "$selected" | rg "^$HOME/(?:Projects/)?" -r '' | rg '/?$' -r '' | rg '\.?' -r '')
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-	tmux new-session -ds $selected_name -c $selected -n hx
-	tmux send-keys -t $selected_name:hx 'hx' C-m
-	tmux new-window -t $selected_name -c $selected -d -n lazygit
-	tmux send-keys -t $selected_name:lazygit 'lazygit' C-m
+if ! tmux has-session -t="$selected_name" 2> /dev/null; then
+	tmux new-session -ds "$selected_name" -c "$selected" -n hx
+	tmux send-keys -t "$selected_name":hx 'hx' C-m
+	tmux new-window -t "$selected_name" -c "$selected" -d -n lazygit
+	tmux send-keys -t "$selected_name":lazygit 'lazygit' C-m
 fi
 
-if [ -z $TMUX ]; then
-	tmux attach-session -t $selected_name
+if [ -z "$TMUX" ]; then
+	tmux attach-session -t "$selected_name"
 else
-	tmux switch-client -t $selected_name
+	tmux switch-client -t "$selected_name"
 fi
