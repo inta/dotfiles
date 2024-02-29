@@ -1,0 +1,15 @@
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control"
+
+[shell]
+args = ["-l", "-c", "tmux attach || tmux-sessionizr"]
+program = "/usr/bin/fish"
+
+[window]
+title = "Tmuxalacritty"
+
+[window.dimensions]
+columns = 150
+lines = 50

@@ -1,0 +1,8 @@
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control"
+
+[window.dimensions]
+columns = 150
+lines = 50

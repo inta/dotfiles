@@ -1,0 +1,15 @@
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control"
+
+[shell]
+args = ["-l", "-c", "zellij attach || zellij-sessionizr"]
+program = "/usr/bin/fish"
+
+[window]
+title = "Zellijalacritty"
+
+[window.dimensions]
+columns = 150
+lines = 50

@@ -4,6 +4,7 @@ theme = "darcula"
 rulers = [80, 120]
 #cursorline = true
 bufferline = "multiple"
+line-number = "relative"
 
 [editor.cursor-shape]
 insert = "bar"

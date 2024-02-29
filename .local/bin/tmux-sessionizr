@@ -3,9 +3,15 @@
 if [ $# -eq 1 ]; then
 	selected=$1
 else
-	selected=$(fd --min-depth 1 --max-depth 2 --type d . ~/Projects | sk --keep-right --reverse --delimiter=/ --nth=5..)
+	mark_active_tmux_session='name=$(echo $0 | sed s/^.*\\/Projects\\///); \
+		if tmux has-session -t="$name" 2> /dev/null; then echo $0 \*; else echo $0; fi'
+	selected=$(fd --min-depth 1 --max-depth 2 --type d . ~/Projects -x sh -c "$mark_active_tmux_session" |
+		sk --keep-right --reverse --delimiter=/ --nth=5..)
 	if [ $? -gt 0 ]; then exit; fi
 fi
+
+# remove asterisk marking opened tmux sessions
+selected=$(echo "$selected" | rg '(\s\*)?$' -r '')
 
 # remove path prefix and trailing slash
 selected_name=$(echo "$selected" | rg "^$HOME/(?:Projects/)?" -r '' | rg '/?$' -r '' | rg '\.?' -r '')
