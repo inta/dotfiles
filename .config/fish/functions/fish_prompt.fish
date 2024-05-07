@@ -20,7 +20,7 @@ function fish_prompt
 		set -l git_ahead
 		set -l git_behind
 		if test -n "$git_dir"
-			set git_branch (command git branch | sed -n '/\* /s///p' 2>/dev/null)
+			set git_branch (command git branch --show-current)
 			set git_remote (command git for-each-ref --format='%(upstream:short)' (command git symbolic-ref -q HEAD) origin/mainline)
 			if test -n "$git_branch" && test -n "$git_remote"
 				set git_ahead (command git rev-list --count $git_remote..$git_branch 2>/dev/null)

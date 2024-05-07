@@ -11,7 +11,7 @@ if [ ! -d "$dest_dir" ]; then
 fi
 
 if command -v kmonad >/dev/null && [ "$(kmonad --version | grep -oP '^[\d.]+')" = "$release_version" ]; then
-	echo "Alreasy up to date..."
+	echo "Already up to date..."
 	exit
 fi
 

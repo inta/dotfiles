@@ -28,7 +28,7 @@ def git_status [] {
     ([
         (ansi reset),
         (if ($git_branch != "") { $"($clean_dirty_color)(char space)(char space)($git_branch)" }),
-        (if ($git_branch == "") { $"($behind_color)(char space)⟡(char space)((run-external "git" "branch") | (run-external 'grep' '-oP' '(?<=\* \()[^)]+'))" }),
+        (if ($git_branch == "") { $"($behind_color)(char space)⋄(char space)((run-external "git" "branch") | (run-external 'grep' '-oP' '(?<=\* \()[^)]+'))" }),
         (if ($git_behind > 0) { $"($behind_color)(char space)↓($git_behind)" }),
         (if ($git_ahead > 0) { $"($ahead_color)(char space)↑($git_ahead)" }),
         (if ($git_staged) { $"($staged_color)(char space)+" }),

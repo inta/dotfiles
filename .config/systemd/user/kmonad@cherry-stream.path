@@ -1,0 +1,10 @@
+[Unit]
+Description=start kmonad for cherry stream
+StartLimitIntervalSec=400
+StartLimitBurst=3
+
+[Path]
+PathExists=/dev/input/by-id/usb-Cherry_GmbH_CHERRY_Corded_Device-event-kbd
+
+[Install]
+WantedBy=default.target

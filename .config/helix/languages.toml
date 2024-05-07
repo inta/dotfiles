@@ -48,3 +48,9 @@ language-servers = ["sql-language-server"]
 [[language]]
 name = "nix"
 indent = {tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "fish"
+indent = {tab-width = 4, unit = "\t"}
+# fish_indent does not use tabs, so we fix it that way
+formatter = { command = "dash", args = ["-c", "fish_indent | sed 's/    /\t/g'"] }

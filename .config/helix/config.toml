@@ -5,6 +5,7 @@ rulers = [80, 120]
 #cursorline = true
 bufferline = "multiple"
 line-number = "relative"
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
