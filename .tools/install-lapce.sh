@@ -1,8 +1,8 @@
 #!/bin/sh
 
 release_version=$(curl -fsSI 'https://github.com/lapce/lapce/releases/latest' | grep -i 'location:' | grep -oP '(?<=/v)[\d.]+')
-dir_name="Lapce"
-archive_name="$dir_name-linux.tar.gz"
+dir_name="lapce"
+archive_name="$dir_name-linux-amd64.tar.gz"
 download_url="https://github.com/lapce/lapce/releases/download/v$release_version/$archive_name"
 tmp_dir="/tmp"
 dest_dir=$HOME/Applications
