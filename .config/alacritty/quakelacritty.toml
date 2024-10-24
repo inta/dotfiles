@@ -3,10 +3,12 @@ action = "Quit"
 key = "Q"
 mods = "Control"
 
-[shell]
+[terminal.shell]
 args = ["-L", "quake", "new-session", "-As", "quake"]
 program = "/usr/bin/tmux"
 
 [window]
 decorations = "none"
 opacity = 0.95
+
+[terminal]
