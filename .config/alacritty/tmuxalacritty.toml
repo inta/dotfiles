@@ -3,7 +3,7 @@ action = "Quit"
 key = "Q"
 mods = "Control"
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux attach || tmux-sessionizr"]
 program = "/usr/bin/fish"
 
@@ -13,3 +13,5 @@ title = "Tmuxalacritty"
 [window.dimensions]
 columns = 150
 lines = 50
+
+[terminal]

@@ -3,7 +3,7 @@ action = "Quit"
 key = "Q"
 mods = "Control"
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "zellij attach || zellij-sessionizr"]
 program = "/usr/bin/fish"
 
@@ -13,3 +13,5 @@ title = "Zellijalacritty"
 [window.dimensions]
 columns = 150
 lines = 50
+
+[terminal]
