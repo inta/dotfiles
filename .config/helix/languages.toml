@@ -30,6 +30,12 @@ indent = {tab-width = 4, unit = "\t"}
 [[language]]
 name = "css"
 indent = {tab-width = 4, unit = "\t"}
+formatter = {command = "js-beautify", args = [
+	"--type",
+	"css",
+	"--editorconfig",
+	"--space-around-selector-separator",
+]}
 
 [[language]]
 name = "bash"
@@ -53,4 +59,16 @@ indent = {tab-width = 4, unit = "\t"}
 name = "fish"
 indent = {tab-width = 4, unit = "\t"}
 # fish_indent does not use tabs, so we fix it that way
-formatter = { command = "dash", args = ["-c", "fish_indent | sed 's/    /\t/g'"] }
+formatter = {command = "dash", args = ["-c", "fish_indent | sed 's/    /\t/g'"]}
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = {command = "taplo", args = [
+	"fmt",
+	"--option",
+	"indent_string=\t",
+	"--option",
+	"compact_inline_tables=true",
+	"-",
+]}

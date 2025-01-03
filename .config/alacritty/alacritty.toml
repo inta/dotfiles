@@ -6,3 +6,10 @@ mods = "Control"
 [window.dimensions]
 columns = 150
 lines = 50
+
+[font]
+# normal = {family = "Noto Sans Mono", style = "Regular"}
+normal = {family = "DejaVu Sans Mono", style = "Book"}
+# normal = {family = "Fira Code", style = "Regular"}
+# normal = {family = "JetBrains Mono", style = "Regular"}
+# normal = {family = "Source Code Pro", style = "Regular"}
